@@ -2,6 +2,10 @@
 
 An interactive data visualization dashboard built with Streamlit to analyze Adidas sales data across different retailers, regions, and time periods.
 
+##Dataset
+
+**Kaggle Dataset**
+
 ## 🎯 Features
 
 - **Real-time Sales Analytics**: Interactive visualizations of Adidas sales data
@@ -121,8 +125,6 @@ template='gridon'  # Options: 'plotly', 'plotly_white', 'plotly_dark', 'ggplot2'
 ## 🚀 Deployment
 
 ### Deploy to Streamlit Cloud
-
-Your app will be live at: `https://YOUR_USERNAME-REPO_NAME.streamlit.app`
 
 ## 📝 To-Do / Future Enhancements
 
