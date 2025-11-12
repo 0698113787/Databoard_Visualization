@@ -34,7 +34,7 @@ Interactive treemap showing sales distribution across regions and cities.
 
 ## 🚀 Live Demo
 
-[View Live Dashboard](https://your-deployed-app-url.streamlit.app)
+[View Live Dashboard](https://databoardvisualization.streamlit.app/)
 
 ## 🛠️ Technologies Used
 
@@ -100,7 +100,6 @@ adidas-sales-dashboard/
 ├── adidas_logo.webp       # Company logo
 ├── requirements.txt       # Python dependencies
 ├── README.md             # Project documentation
-└── .gitignore            # Git ignore file
 ```
 
 ## 📊 Data Format
