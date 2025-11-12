@@ -2,7 +2,7 @@
 
 An interactive data visualization dashboard built with Streamlit to analyze Adidas sales data across different retailers, regions, and time periods.
 
-###Dataset
+### Dataset
 
 **Kaggle Dataset**
 
