@@ -114,7 +114,7 @@ def format_sales(values):
 treemap['TotalSales(Formatted)'] = treemap['TotalSales'].apply(format_sales)
  
 with col7:
-    fig4 = px.treemap(treemap,path=['Region','City'],values='TotalSales',hover_name='TotalSales (Formatted)',hover_data=['TotalSales (Formatted)'],color='City',height=700,width=600)
+    fig4 = px.treemap(treemap,path=['Region','City'],values='TotalSales',hover_name='City',hover_data=['TotalSales(Formatted)'],color='City',height=700,width=600)
     fig4.update_traces(textinfo='label+value')
     st.subheader('Total Sales By Region And City')
     st.plotly_chart(fig4,use_container_width=True)
