@@ -94,6 +94,7 @@ with col6:
 
 #view data and download it
 _,view3,dwn3=st.columns([0.5,0.45,0.45])
+
 with view3:
     expander = st.expander('View Data For Sales By Unit Sold')
     expander.write(result1)
@@ -106,9 +107,14 @@ st.divider()
 
 _,col7 = st.columns([0.1,1])
 treemap = df[['Region','City','TotalSales']].groupby(by=['Region','City'])['TotalSales'].sum().reset_index()
-
+#round off to 2 decimal places
+def format_sales(values):
+    if values>=0:
+        return "{:.2f} Lakhs".format(values/100000)   
+treemap['TotalSales(Formatted)'] = treemap['TotalSales'].apply(format_sales)
+ 
 with col7:
-    fig4 = px.treemap(treemap,path=['Region','City'],values='TotalSales',hover_name='TotalSales',hover_data=['TotalSales'],color='City',height=700,width=600)
+    fig4 = px.treemap(treemap,path=['Region','City'],values='TotalSales',hover_name='TotalSales (Formatted)',hover_data=['TotalSales (Formatted)'],color='City',height=700,width=600)
     fig4.update_traces(textinfo='label+value')
     st.subheader('Total Sales By Region And City')
     st.plotly_chart(fig4,use_container_width=True)
